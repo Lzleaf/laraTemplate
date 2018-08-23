@@ -16,3 +16,24 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::any('/login', function (Request $request){
+    return response()->json(["code" => 200, "msg" => "success", "data" => ["token" => "askjhkwrhjahsmnvmnvashiui"]]);
+});
+
+Route::get("/get_info", function (Request $request){
+   if($request->token == "askjhkwrhjahsmnvmnvashiui") {
+       return response()->json([
+           "code" => 200,
+           "msg" => "success",
+           "data" => [
+               "user" => [
+                   "avatar" => "https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png",
+                   "userName" => "Leaf",
+                   "userId" => 1,
+                   "access" => ["super_admin"]
+               ]
+           ]
+       ]);
+   }
+});
