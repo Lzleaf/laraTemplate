@@ -16,18 +16,27 @@ window.Vue = require('vue');
  */
 
 import iView from 'iview'
+import i18n from './locale'
 import App from './app.vue'
 import VueRouter from 'vue-router'
 import 'iview/dist/styles/iview.css'
 import router from './router'
 import store from './store'
+import config from './config'
 
-Vue.use(iView)
+Vue.use(iView, {
+    i18n: (key, value) => i18n.t(key, value)
+})
 Vue.use(VueRouter)
+
+Vue.config.productionTip = false
+
+Vue.prototype.$config = config
 
 const app = new Vue({
     el: '#app',
     router,
     store,
+    i18n,
     render: h => h(App)
 });

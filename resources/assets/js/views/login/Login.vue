@@ -34,7 +34,7 @@
 
                         console.log(res)
                         this.$router.push({
-                            name: 'hello'
+                            name: 'home'
                         })
                     })
                 })
