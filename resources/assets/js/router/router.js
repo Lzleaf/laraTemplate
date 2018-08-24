@@ -1,4 +1,5 @@
 import Main from '../views/main'
+import parentView from '../components/parent-view'
 
 export default [
     {
@@ -13,6 +14,7 @@ export default [
     {
         path: '/',
         name: '_home',
+        redirect: '/home',
         component: Main,
         meta: {
             hideInMenu: true,
@@ -40,5 +42,56 @@ export default [
             href: 'https://lison16.github.io/iview-admin-doc/#/',
             icon: 'ios-book'
         }
+    },
+    {
+        path: '/multilevel',
+        name: 'multilevel',
+        meta: {
+            icon: 'android-menu',
+            title: '多级菜单'
+        },
+        component: Main,
+        children: [
+            {
+                path: 'level_2_1',
+                name: 'level_2_1',
+                meta: {
+                    icon: 'md-funnel',
+                    title: '二级-1'
+                },
+                component: require('../views/multilevel/level-2-1.vue')
+            },
+            {
+                path: 'level_2_2',
+                name: 'level_2_2',
+                meta: {
+                    access: ['super_admin'],
+                    icon: 'md-funnel',
+                    showAlways: true,
+                    title: '二级-2'
+                },
+                component: parentView,
+                children: [
+                    {
+                        path: 'level_2_2_1',
+                        name: 'level_2_2_1',
+                        meta: {
+                            icon: 'md-funnel',
+                            title: '三级'
+                        },
+                        component: require('../views/multilevel/level-2-2/level-3-1.vue')
+                    }
+                ]
+            },
+            {
+                path: 'level_2_3',
+                name: 'level_2_3',
+                meta: {
+                    icon: 'md-funnel',
+                    title: '二级-3'
+                },
+                component: require('../views/multilevel/level-2-3.vue')
+            },
+        ]
     },
 ]

@@ -37,3 +37,14 @@ Route::get("/get_info", function (Request $request){
        ]);
    }
 });
+
+Route::post("/logout", function (Request $request){
+    if($request->token == "askjhkwrhjahsmnvmnvashiui") {
+        return response()->json([
+            "code" => 200,
+            "msg" => "success",
+            "data" => [
+            ]
+        ]);
+    }
+});

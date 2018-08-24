@@ -11,6 +11,6 @@
 |
 */
 
-Route::any('{all?}', function () {
+Route::any('{all}', function () {
     return view('welcome');
-});
+})->where(['all' => '.*']);

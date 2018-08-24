@@ -16,6 +16,9 @@
         height: 100%;
     }
 
+    .ivu-icon {
+        vertical-align:middle;
+    }
     #app {
         .size;
     }
