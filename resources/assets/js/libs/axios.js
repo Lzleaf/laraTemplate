@@ -1,10 +1,11 @@
 import Axios from 'axios'
 import baseURL from './../config/url'
-import { Message } from 'iview'
+import {Message} from 'iview'
 import Cookies from 'js-cookie'
-import { TOKEN_KEY } from './util'
+import {TOKEN_KEY} from './util'
+
 class httpRequest {
-    constructor () {
+    constructor() {
         this.options = {
             method: '',
             url: ''
@@ -12,14 +13,16 @@ class httpRequest {
         // 存储请求队列
         this.queue = {}
     }
+
     // 销毁请求实例
-    destroy (url) {
+    destroy(url) {
         delete this.queue[url]
         const queue = Object.keys(this.queue)
         return queue.length
     }
+
     // 请求拦截
-    interceptors (instance, url) {
+    interceptors(instance, url) {
         // 添加请求拦截器
         instance.interceptors.request.use(config => {
             if (!config.url.includes('/users')) {
@@ -35,7 +38,7 @@ class httpRequest {
 
         // 添加响应拦截器
         instance.interceptors.response.use((res) => {
-            let { data } = res
+            let {data} = res
             const is = this.destroy(url)
             if (!is) {
                 setTimeout(() => {
@@ -51,19 +54,29 @@ class httpRequest {
                 } else {
                     if (data.msg) Message.error(data.msg)
                 }
+
                 return false
             }
             return data
         }, (error) => {
+            console.log(error)
             Message.error('服务内部错误')
             // 对响应错误做点什么
             return Promise.reject(error)
         })
     }
+
     // 创建实例
-    create () {
+    create(is_api) {
+        var request_url = ''
+        if (!is_api) {
+            request_url = 'http://homestead.test'
+        } else {
+            request_url = baseURL
+        }
+        console.log(request_url)
         let conf = {
-            baseURL: baseURL,
+            baseURL: request_url,
             // timeout: 2000,
             headers: {
                 'Content-Type': 'application/json; charset=utf-8',
@@ -72,17 +85,21 @@ class httpRequest {
         }
         return Axios.create(conf)
     }
+
     // 合并请求实例
-    mergeReqest (instances = []) {
+    mergeReqest(instances = []) {
         //
     }
+
     // 请求实例
-    request (options) {
-        var instance = this.create()
+    request(options) {
+        var is_api = options.is_api ? false : true
+        var instance = this.create(is_api)
         this.interceptors(instance, options.url)
         options = Object.assign({}, options)
         this.queue[options.url] = instance
         return instance(options)
     }
 }
+
 export default httpRequest

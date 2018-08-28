@@ -78,7 +78,6 @@
                 return this.tagNavList.length ? this.tagNavList.filter(item => !(item.meta && item.meta.notCache)).map(item => item.name) : []
             },
             userAvatar () {
-                console.log(this.$store.state.user)
                 return this.$store.state.user.user.avatar
             },
             menuList() {

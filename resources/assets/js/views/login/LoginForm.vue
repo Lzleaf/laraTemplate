@@ -43,7 +43,7 @@
         data() {
             return {
                 form: {
-                    userName: 'super_admin',
+                    userName: '280747685@qq.com',
                     password: ''
                 }
             }
