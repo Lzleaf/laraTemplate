@@ -17,33 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::any('/login', 'Auth\LoginController@login');
-
-Route::get("/get_info", function (Request $request) {
-    return response()->json([
-        "code" => 200,
-        "msg" => "success",
-        "data" => [
-            "user" => [
-                "avatar" => "https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png",
-                "userName" => "Leaf",
-                "userId" => 1,
-                "access" => ["super_admin"]
-            ]
-        ]
-    ]);
-});
-
-Route::post("/logout", function (Request $request) {
-
-    return response()->json([
-        "code" => 200,
-        "msg" => "success",
-        "data" => [
-        ]
-    ]);
-
-});
+Route::post('/login', 'Auth\LoginController@login');
+Route::get("/user_info", 'Auth\LoginController@user');
+Route::post("/logout", 'Auth\LoginController@logout');
+Route::post("/refresh", 'Auth\LoginController@refresh');
 
 Route::get('/posts', 'PostController@index');
 Route::get('/posts/{post}', 'PostController@show');

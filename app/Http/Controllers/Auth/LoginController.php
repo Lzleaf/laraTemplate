@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Proxy\TokenProxy;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -44,5 +45,20 @@ class LoginController extends Controller
     {
 //        $this->validateLogin(request());
         return $this->proxy->login(request('email'), request('password'));
+    }
+
+    public function user()
+    {
+        $this->proxy->user();
+    }
+
+    public function logout()
+    {
+        $this->proxy->logout();
+    }
+
+    public function refresh()
+    {
+        return $this->proxy->refresh();
     }
 }

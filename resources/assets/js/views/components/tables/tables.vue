@@ -22,7 +22,6 @@
         },
         methods: {
             changePage (page) {
-                console.log(122112)
                 // The simulated data is changed directly here, and the actual usage scenario should fetch the data from the server
                 this.$emit('on-change-page', page)
             }

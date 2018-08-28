@@ -27,7 +27,8 @@
                 type: Array,
                 default: () => {
                     return [
-                        {required: true, message: '账号不能为空', trigger: 'blur'}
+                        {required: true, message: '账号不能为空', trigger: 'blur'},
+                        {required: true, type: 'email', message: '请输入正确的邮箱地址', trigger: 'blur'}
                     ]
                 }
             },

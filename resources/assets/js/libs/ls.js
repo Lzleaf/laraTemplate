@@ -1,4 +1,6 @@
 
+export const TOKEN_KEY = 'login_access_token'
+
 export const setToken = (token_name, token) => {
     window.localStorage.setItem(token_name,token);
 }

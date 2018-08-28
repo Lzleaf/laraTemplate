@@ -13067,20 +13067,20 @@ var index_esm = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TOKEN_KEY; });
+/* unused harmony export TOKEN_KEY */
 /* unused harmony export setToken */
 /* unused harmony export getToken */
 /* unused harmony export hasChild */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getMenuByRouter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getBreadCrumbList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return showTitle; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return setTagNavListInLocalstorage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return getTagNavListFromLocalstorage; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getHomeRoute; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getNewTagList; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return canTurnTo; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getMenuByRouter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getBreadCrumbList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return showTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return setTagNavListInLocalstorage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getTagNavListFromLocalstorage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getHomeRoute; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getNewTagList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return canTurnTo; });
 /* unused harmony export getParams */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getNextName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getNextName; });
 /* unused harmony export doCustomTimes */
 /* unused harmony export getArrayFromFile */
 /* unused harmony export getTableDataFromArray */
@@ -54990,7 +54990,8 @@ module.exports = "/fonts/vendor/_iview@2.14.3@iview/dist/styles/ionicons.eot?2c2
         meta: {
             hideInMenu: true,
             title: '首页',
-            notCache: true
+            notCache: true,
+            auth: true
         },
         component: __webpack_require__(165)
     }]
@@ -55015,7 +55016,8 @@ module.exports = "/fonts/vendor/_iview@2.14.3@iview/dist/styles/ionicons.eot?2c2
         name: 'level_2_1',
         meta: {
             icon: 'md-funnel',
-            title: '二级-1'
+            title: '二级-1',
+            auth: true
         },
         component: __webpack_require__(171)
     }, {
@@ -55033,7 +55035,8 @@ module.exports = "/fonts/vendor/_iview@2.14.3@iview/dist/styles/ionicons.eot?2c2
             name: 'level_2_2_1',
             meta: {
                 icon: 'md-funnel',
-                title: '三级'
+                title: '三级',
+                auth: true
             },
             component: __webpack_require__(174)
         }]
@@ -55042,7 +55045,8 @@ module.exports = "/fonts/vendor/_iview@2.14.3@iview/dist/styles/ionicons.eot?2c2
         name: 'level_2_3',
         meta: {
             icon: 'md-funnel',
-            title: '二级-3'
+            title: '二级-3',
+            auth: true
         },
         component: __webpack_require__(177)
     }]
@@ -55532,9 +55536,12 @@ var axios = new __WEBPACK_IMPORTED_MODULE_0__axios__["a" /* default */]();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return setToken; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getToken; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return removeToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TOKEN_KEY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return setToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getToken; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return removeToken; });
+
+var TOKEN_KEY = 'login_access_token';
 
 var setToken = function setToken(token_name, token) {
     window.localStorage.setItem(token_name, token);
@@ -88866,13 +88873,13 @@ var content = __webpack_require__(69);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("6b46d152", content, false, {});
+var update = __webpack_require__(3)("20c07eb7", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6971d05f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./app.vue", function() {
-     var newContent = require("!!../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6971d05f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./app.vue");
+   module.hot.accept("!!../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6971d05f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./app.vue", function() {
+     var newContent = require("!!../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6971d05f\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./app.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -89168,7 +89175,8 @@ var ACCESS_TOKEN_KEY = 'login_access_token';
 
 router.beforeEach(function (to, from, next) {
     __WEBPACK_IMPORTED_MODULE_4_iview___default.a.LoadingBar.start();
-    var token = Object(__WEBPACK_IMPORTED_MODULE_6__libs_ls__["a" /* getToken */])(ACCESS_TOKEN_KEY);
+    var token = Object(__WEBPACK_IMPORTED_MODULE_6__libs_ls__["b" /* getToken */])(ACCESS_TOKEN_KEY);
+
     if (!token && to.name !== LOGIN_PAGE_NAME) {
         // 未登录且要跳转的页面不是登录页
         next({
@@ -89185,8 +89193,17 @@ router.beforeEach(function (to, from, next) {
     } else {
         __WEBPACK_IMPORTED_MODULE_3__store__["a" /* default */].dispatch('getUserInfo').then(function (user) {
             // 拉取用户信息，通过用户权限和跳转的页面的name来判断是否有权限访问;access必须是一个数组，如：['super_admin'] ['super_admin', 'admin']
-            if (Object(__WEBPACK_IMPORTED_MODULE_5__libs_util__["b" /* canTurnTo */])(to.name, user.access, __WEBPACK_IMPORTED_MODULE_2__router__["a" /* default */])) next(); // 有权限，可访问
+            if (Object(__WEBPACK_IMPORTED_MODULE_5__libs_util__["a" /* canTurnTo */])(to.name, user.access, __WEBPACK_IMPORTED_MODULE_2__router__["a" /* default */])) next(); // 有权限，可访问
             else next({ replace: true, name: 'error_401' }); // 无权限，重定向到401页面
+        }).catch(function (err) {
+            __WEBPACK_IMPORTED_MODULE_3__store__["a" /* default */].dispatch('handleRefresh').then(function (res) {
+                next();
+            }).catch(function (err) {
+                __WEBPACK_IMPORTED_MODULE_3__store__["a" /* default */].dispatch('logoutSuccess');
+                next({
+                    name: LOGIN_PAGE_NAME
+                });
+            });
         });
     }
 });
@@ -89341,8 +89358,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     data: function data() {
         return {
             collapsed: false,
-            minLogo: __WEBPACK_IMPORTED_MODULE_8__images_logo_min_jpg__["default"],
-            maxLogo: __WEBPACK_IMPORTED_MODULE_9__images_logo_jpg__["default"],
+            minLogo: __WEBPACK_IMPORTED_MODULE_8__images_logo_min_jpg___default.a,
+            maxLogo: __WEBPACK_IMPORTED_MODULE_9__images_logo_jpg___default.a,
             isFullscreen: false
         };
     },
@@ -89385,7 +89402,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
             this.collapsed = state;
         },
         handleCloseTag: function handleCloseTag(res, type, name) {
-            var nextName = Object(__WEBPACK_IMPORTED_MODULE_6__libs_util__["g" /* getNextName */])(this.tagNavList, name);
+            var nextName = Object(__WEBPACK_IMPORTED_MODULE_6__libs_util__["f" /* getNextName */])(this.tagNavList, name);
             this.setTagNavList(res);
             var openName = '';
             if (type === 'all') {
@@ -89404,7 +89421,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     watch: {
         '$route': function $route(newRoute) {
             this.setBreadCrumb(newRoute.matched);
-            this.setTagNavList(Object(__WEBPACK_IMPORTED_MODULE_6__libs_util__["f" /* getNewTagList */])(this.tagNavList, newRoute));
+            this.setTagNavList(Object(__WEBPACK_IMPORTED_MODULE_6__libs_util__["e" /* getNewTagList */])(this.tagNavList, newRoute));
         }
     },
     mounted: function mounted() {
@@ -89512,13 +89529,13 @@ var content = __webpack_require__(86);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("5747a1df", content, false, {});
+var update = __webpack_require__(3)("31c27382", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d71e5e56\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./side-menu.vue", function() {
-     var newContent = require("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d71e5e56\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./side-menu.vue");
+   module.hot.accept("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d71e5e56\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./side-menu.vue", function() {
+     var newContent = require("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d71e5e56\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./side-menu.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -89826,13 +89843,13 @@ var content = __webpack_require__(92);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("d5c4564e", content, false, {});
+var update = __webpack_require__(3)("aaa129ca", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9b8cde40\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./common-icon.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9b8cde40\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./common-icon.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9b8cde40\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./common-icon.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-9b8cde40\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./common-icon.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -89972,13 +89989,13 @@ var content = __webpack_require__(97);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("7842e75a", content, false, {});
+var update = __webpack_require__(3)("69f2ea1c", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f3c711e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./icons.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f3c711e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./icons.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f3c711e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./icons.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1f3c711e\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./icons.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -90714,13 +90731,13 @@ var content = __webpack_require__(112);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("5502bf91", content, false, {});
+var update = __webpack_require__(3)("c2b9281e", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6833b812\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./sider-trigger.vue", function() {
-     var newContent = require("!!../../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6833b812\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./sider-trigger.vue");
+   module.hot.accept("!!../../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6833b812\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./sider-trigger.vue", function() {
+     var newContent = require("!!../../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-6833b812\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./sider-trigger.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -91370,13 +91387,13 @@ var content = __webpack_require__(134);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("25e60211", content, false, {});
+var update = __webpack_require__(3)("033801b1", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27321649\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./fullscreen.vue", function() {
-     var newContent = require("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27321649\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./fullscreen.vue");
+   module.hot.accept("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27321649\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./fullscreen.vue", function() {
+     var newContent = require("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-27321649\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./fullscreen.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -91772,13 +91789,13 @@ var content = __webpack_require__(144);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("6fae7b5a", content, false, {});
+var update = __webpack_require__(3)("e74a0c1a", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7d6146c9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./tags-nav.vue", function() {
-     var newContent = require("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7d6146c9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./tags-nav.vue");
+   module.hot.accept("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7d6146c9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./tags-nav.vue", function() {
+     var newContent = require("!!../../../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-7d6146c9\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./tags-nav.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -91930,7 +91947,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       this.$emit('input', item);
     },
     showTitleInside: function showTitleInside(item) {
-      return Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["j" /* showTitle */])(item, this);
+      return Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["i" /* showTitle */])(item, this);
     },
     moveToView: function moveToView(tag) {
       var outerWidth = this.$refs.scrollOuter.offsetWidth;
@@ -92131,13 +92148,13 @@ if (false) {
 /* 147 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: Error: /home/vagrant/Code/laraTemplate/node_modules/_optipng-bin@3.1.4@optipng-bin/vendor/optipng: 1: /home/vagrant/Code/laraTemplate/node_modules/_optipng-bin@3.1.4@optipng-bin/vendor/optipng: Syntax error: \"(\" unexpected\n\n    at Promise.all.then.arr (/home/vagrant/Code/laraTemplate/node_modules/_execa@0.7.0@execa/index.js:231:11)\n    at process._tickCallback (internal/process/next_tick.js:109:7)");
+module.exports = "/images/logo-min.jpg?5edae2b0c8609c4cf4b6aa34855e4213";
 
 /***/ }),
 /* 148 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: Error: /home/vagrant/Code/laraTemplate/node_modules/_optipng-bin@3.1.4@optipng-bin/vendor/optipng: 1: /home/vagrant/Code/laraTemplate/node_modules/_optipng-bin@3.1.4@optipng-bin/vendor/optipng: Syntax error: \"(\" unexpected\n\n    at Promise.all.then.arr (/home/vagrant/Code/laraTemplate/node_modules/_execa@0.7.0@execa/index.js:231:11)\n    at process._tickCallback (internal/process/next_tick.js:109:7)");
+module.exports = "/images/logo.jpg?5edae2b0c8609c4cf4b6aa34855e4213";
 
 /***/ }),
 /* 149 */
@@ -92513,13 +92530,13 @@ var content = __webpack_require__(158);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(3)("60477d6a", content, false, {});
+var update = __webpack_require__(3)("7ea76f2b", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f427380\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./Login.vue", function() {
-     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f427380\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../node_modules/_vue-loader@13.7.2@vue-loader/lib/selector.js?type=styles&index=0!./Login.vue");
+   module.hot.accept("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f427380\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Login.vue", function() {
+     var newContent = require("!!../../../../../node_modules/_css-loader@0.28.11@css-loader/index.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3f427380\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/_less-loader@4.1.0@less-loader/dist/cjs.js!../../../../../node_modules/_vue-loader@13.7.3@vue-loader/lib/selector.js?type=styles&index=0!./Login.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -92547,7 +92564,7 @@ exports.push([module.i, "\n.login {\n  width: 100%;\n  height: 100%;\n  backgrou
 /* 159 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: Error: read ECONNRESET\n    at exports._errnoException (util.js:1018:11)\n    at Pipe.onread (net.js:568:26)");
+module.exports = "/images/login-bg.jpg?72ccb94296bcc2e47256d292c3d9fd3b";
 
 /***/ }),
 /* 160 */
@@ -92592,11 +92609,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
                 password = _ref.password;
 
             this.handleLogin({ userName: userName, password: password }).then(function (res) {
-                // this.getUserInfo().then(res => {
-                //     this.$router.push({
-                //         name: 'home'
-                //     })
-                // })
                 _this.$router.push({
                     name: 'home'
                 });
@@ -92686,7 +92698,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         userNameRules: {
             type: Array,
             default: function _default() {
-                return [{ required: true, message: '账号不能为空', trigger: 'blur' }];
+                return [{ required: true, message: '账号不能为空', trigger: 'blur' }, { required: true, type: 'email', message: '请输入正确的邮箱地址', trigger: 'blur' }];
             }
         },
         passwordRules: {
@@ -92995,9 +93007,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         _handlePosts: function _handlePosts(page) {
             var _this = this;
 
+            this.loading = true;
             this.handlePosts(page).then(function (res) {
                 _this.tableData1 = res.data;
                 _this.total = res.total;
+                _this.loading = false;
             });
         }
     }),
@@ -93083,7 +93097,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     methods: {
         changePage: function changePage(page) {
-            console.log(122112);
             // The simulated data is changed directly here, and the actual usage scenario should fetch the data from the server
             this.$emit('on-change-page', page);
         }
@@ -93435,9 +93448,9 @@ var ACCESS_TOKEN_KEY = 'login_access_token';
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     state: {
-        access_token: Object(__WEBPACK_IMPORTED_MODULE_1__libs_ls__["a" /* getToken */])(ACCESS_TOKEN_KEY),
+        access_token: Object(__WEBPACK_IMPORTED_MODULE_1__libs_ls__["b" /* getToken */])(ACCESS_TOKEN_KEY),
         user: {
-            avatar: '',
+            avatar: 'https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png',
             userName: '',
             userId: '',
             access: ''
@@ -93450,10 +93463,10 @@ var ACCESS_TOKEN_KEY = 'login_access_token';
                 token = _ref.token;
 
             state.$name = token;
-            Object(__WEBPACK_IMPORTED_MODULE_1__libs_ls__["c" /* setToken */])(name, token);
+            Object(__WEBPACK_IMPORTED_MODULE_1__libs_ls__["d" /* setToken */])(name, token);
         },
         removeToken: function removeToken(name) {
-            Object(__WEBPACK_IMPORTED_MODULE_1__libs_ls__["b" /* removeToken */])(name);
+            Object(__WEBPACK_IMPORTED_MODULE_1__libs_ls__["c" /* removeToken */])(name);
         },
         setUser: function setUser(state, user) {
             state.user = user;
@@ -93463,6 +93476,8 @@ var ACCESS_TOKEN_KEY = 'login_access_token';
     actions: {
         //用户登录
         handleLogin: function handleLogin(_ref2, _ref3) {
+            var _this = this;
+
             var commit = _ref2.commit;
             var userName = _ref3.userName,
                 password = _ref3.password;
@@ -93474,46 +93489,75 @@ var ACCESS_TOKEN_KEY = 'login_access_token';
                     userName: userName,
                     password: password
                 }).then(function (res) {
-                    var data = res.data;
-                    commit('setToken', { name: ACCESS_TOKEN_KEY, token: data.access_token });
+                    if (res) {
+                        _this.dispatch('loginSuccess', res);
+                    }
                     resolve();
                 }).catch(function (err) {
                     reject(err);
                 });
             });
         },
+        loginSuccess: function loginSuccess(_ref4, res) {
+            var commit = _ref4.commit;
+
+            var data = res.data;
+            commit('setToken', { name: ACCESS_TOKEN_KEY, token: data.access_token });
+        },
+
 
         // 退出登录
-        handleLogOut: function handleLogOut(_ref4) {
-            var state = _ref4.state,
-                commit = _ref4.commit;
+        handleLogOut: function handleLogOut(_ref5) {
+            var _this2 = this;
 
-            return new Promise(function (resolve, reject) {
-                Object(__WEBPACK_IMPORTED_MODULE_0__api_user__["c" /* logout */])(state.access_token).then(function () {
-                    commit('setToken', { name: ACCESS_TOKEN_KEY, token: '' });
-                    state.user.access = '';
-                    commit('setUser', state.user);
-                    resolve();
-                }).catch(function (err) {
-                    reject(err);
-                });
-                // 如果你的退出登录无需请求接口，则可以直接使用下面三行代码而无需使用logout调用接口
-                // commit('setToken', '')
-                // commit('setAccess', [])
-                // resolve()
-            });
-        },
-
-        //获取用户信息
-        getUserInfo: function getUserInfo(_ref5) {
             var state = _ref5.state,
                 commit = _ref5.commit;
 
             return new Promise(function (resolve, reject) {
+                Object(__WEBPACK_IMPORTED_MODULE_0__api_user__["c" /* logout */])(state.access_token).then(function () {
+                    _this2.dispatch('logoutSuccess');
+                    resolve();
+                }).catch(function (err) {
+                    reject(err);
+                });
+            });
+        },
+        logoutSuccess: function logoutSuccess(_ref6) {
+            var state = _ref6.state,
+                commit = _ref6.commit;
+
+            commit('setToken', { name: ACCESS_TOKEN_KEY, token: '' });
+            state.user.access = '';
+            commit('setUser', state.user);
+        },
+
+
+        //获取用户信息
+        getUserInfo: function getUserInfo(_ref7) {
+            var state = _ref7.state,
+                commit = _ref7.commit;
+
+            return new Promise(function (resolve, reject) {
                 Object(__WEBPACK_IMPORTED_MODULE_0__api_user__["a" /* getUserInfo */])(state.access_token).then(function (res) {
                     var data = res.data;
-                    commit('setUser', data.user);
+                    commit('setUser', data);
                     resolve(data);
+                }).catch(function (err) {
+                    console.log(err);
+                    reject(err);
+                });
+            });
+        },
+        handleRefresh: function handleRefresh(_ref8) {
+            var _this3 = this;
+
+            var state = _ref8.state,
+                commit = _ref8.commit;
+
+            return new Promise(function (resolve, reject) {
+                Object(__WEBPACK_IMPORTED_MODULE_0__api_user__["d" /* refresh */])().then(function (res) {
+                    _this3.dispatch('loginSuccess', res);
+                    resolve();
                 }).catch(function (err) {
                     reject(err);
                 });
@@ -93530,6 +93574,7 @@ var ACCESS_TOKEN_KEY = 'login_access_token';
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return login; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getUserInfo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return logout; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return refresh; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__libs_api_request__ = __webpack_require__(30);
 
 
@@ -93551,10 +93596,7 @@ var login = function login(_ref) {
 
 var getUserInfo = function getUserInfo(token) {
     return __WEBPACK_IMPORTED_MODULE_0__libs_api_request__["a" /* default */].request({
-        url: 'get_info',
-        params: {
-            token: token
-        },
+        url: 'user_info',
         method: 'get'
     });
 };
@@ -93562,6 +93604,13 @@ var getUserInfo = function getUserInfo(token) {
 var logout = function logout(token) {
     return __WEBPACK_IMPORTED_MODULE_0__libs_api_request__["a" /* default */].request({
         url: 'logout',
+        method: 'post'
+    });
+};
+
+var refresh = function refresh() {
+    return __WEBPACK_IMPORTED_MODULE_0__libs_api_request__["a" /* default */].request({
+        url: 'refresh',
         method: 'post'
     });
 };
@@ -93576,12 +93625,14 @@ var logout = function logout(token) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__config_url__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_iview__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_iview___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_iview__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_js_cookie__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_js_cookie___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_js_cookie__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__util__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ls__ = __webpack_require__(31);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+
 
 
 
@@ -93620,9 +93671,14 @@ var httpRequest = function () {
 
             // 添加请求拦截器
             instance.interceptors.request.use(function (config) {
-                if (!config.url.includes('/users')) {
-                    config.headers['x-access-token'] = __WEBPACK_IMPORTED_MODULE_3_js_cookie___default.a.get(__WEBPACK_IMPORTED_MODULE_4__util__["a" /* TOKEN_KEY */]);
+                var token = Object(__WEBPACK_IMPORTED_MODULE_5__ls__["b" /* getToken */])(__WEBPACK_IMPORTED_MODULE_5__ls__["a" /* TOKEN_KEY */]);
+                // if (!config.url.includes('/users')) {
+                //     config.headers['x-access-token'] = token
+                // }
+                if (token) {
+                    config.headers['Authorization'] = 'Bearer ' + token;
                 }
+
                 // Spin.show()
                 // 在发送请求之前做些什么
                 return config;
@@ -93644,9 +93700,7 @@ var httpRequest = function () {
                 if (data.code !== 200) {
                     // 后端服务在个别情况下回报201，待确认
                     if (data.code === 401) {
-                        __WEBPACK_IMPORTED_MODULE_3_js_cookie___default.a.remove(__WEBPACK_IMPORTED_MODULE_4__util__["a" /* TOKEN_KEY */]);
-                        window.location.href = window.location.pathname + '#/login';
-                        __WEBPACK_IMPORTED_MODULE_2_iview__["Message"].error('未登录，或登录失效，请登录');
+                        return Promise.reject("401...");
                     } else {
                         if (data.msg) __WEBPACK_IMPORTED_MODULE_2_iview__["Message"].error(data.msg);
                     }
@@ -93749,26 +93803,26 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 /* harmony default export */ __webpack_exports__["a"] = ({
     state: {
         breadCrumbList: [],
-        homeRoute: Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["d" /* getHomeRoute */])(__WEBPACK_IMPORTED_MODULE_1__router_router__["a" /* default */]),
+        homeRoute: Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["c" /* getHomeRoute */])(__WEBPACK_IMPORTED_MODULE_1__router_router__["a" /* default */]),
         tagNavList: [],
         local: ''
     },
 
     getters: {
         menuList: function menuList(state, getters, rootState) {
-            return Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["e" /* getMenuByRouter */])(__WEBPACK_IMPORTED_MODULE_1__router_router__["a" /* default */], rootState.user.user.access);
+            return Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["d" /* getMenuByRouter */])(__WEBPACK_IMPORTED_MODULE_1__router_router__["a" /* default */], rootState.user.user.access);
         }
     },
 
     mutations: {
         setBreadCrumb: function setBreadCrumb(state, routeMetched) {
-            state.breadCrumbList = Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["c" /* getBreadCrumbList */])(routeMetched, state.homeRoute);
+            state.breadCrumbList = Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["b" /* getBreadCrumbList */])(routeMetched, state.homeRoute);
         },
         setTagNavList: function setTagNavList(state, list) {
             if (list) {
                 state.tagNavList = [].concat(_toConsumableArray(list));
-                Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["i" /* setTagNavListInLocalstorage */])([].concat(_toConsumableArray(list)));
-            } else state.tagNavList = Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["h" /* getTagNavListFromLocalstorage */])();
+                Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["h" /* setTagNavListInLocalstorage */])([].concat(_toConsumableArray(list)));
+            } else state.tagNavList = Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["g" /* getTagNavListFromLocalstorage */])();
         },
         addTag: function addTag(state, item) {
             var type = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'unshift';
@@ -93777,7 +93831,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
                 return tag.name === item.name;
             }) < 0) {
                 if (type === 'push') state.tagNavList.push(item);else state.tagNavList.unshift(item);
-                Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["i" /* setTagNavListInLocalstorage */])([].concat(_toConsumableArray(state.tagNavList)));
+                Object(__WEBPACK_IMPORTED_MODULE_0__libs_util__["h" /* setTagNavListInLocalstorage */])([].concat(_toConsumableArray(state.tagNavList)));
             }
         },
         setLocal: function setLocal(state, lang) {
@@ -93853,7 +93907,7 @@ var posts_show = function posts_show(post_id) {
 /* 188 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Missing binding /home/vagrant/Code/laraTemplate/node_modules/_node-sass@4.9.3@node-sass/vendor/linux-x64-48/binding.node\nNode Sass could not find a binding for your current environment: Linux 64-bit with Node.js 6.x\n\nFound bindings for the following environments:\n  - OS X 64-bit with Node.js 8.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass` to download the binding for your current environment.\n    at module.exports (/home/vagrant/Code/laraTemplate/node_modules/_node-sass@4.9.3@node-sass/lib/binding.js:15:13)\n    at Object.<anonymous> (/home/vagrant/Code/laraTemplate/node_modules/_node-sass@4.9.3@node-sass/lib/index.js:14:35)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/home/vagrant/Code/laraTemplate/node_modules/_sass-loader@6.0.7@sass-loader/lib/loader.js:3:14)\n    at Module._compile (module.js:570:32)\n    at Object.Module._extensions..js (module.js:579:10)\n    at Module.load (module.js:487:32)\n    at tryModuleLoad (module.js:446:12)\n    at Function.Module._load (module.js:438:3)\n    at Module.require (module.js:497:17)\n    at require (internal/module.js:20:19)\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:165:10)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:165:10)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:165:10)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:36:3)\n    at runLoaders (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModule.js:195:19)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:364:11\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:170:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:27:11)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:165:10)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:165:10)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:165:10)\n    at /home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/home/vagrant/Code/laraTemplate/node_modules/_loader-runner@2.3.0@loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModule.js:182:3)\n    at NormalModule.build (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModule.js:275:15)\n    at Compilation.buildModule (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/Compilation.js:157:10)\n    at moduleFactory.create (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/Compilation.js:460:10)\n    at factory (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModuleFactory.js:243:5)\n    at applyPluginsAsyncWaterfall (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModuleFactory.js:94:13)\n    at /home/vagrant/Code/laraTemplate/node_modules/_tapable@0.2.8@tapable/lib/Tapable.js:268:11\n    at NormalModuleFactory.params.normalModuleFactory.plugin (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/home/vagrant/Code/laraTemplate/node_modules/_tapable@0.2.8@tapable/lib/Tapable.js:272:13)\n    at resolver (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModuleFactory.js:69:10)\n    at process.nextTick (/home/vagrant/Code/laraTemplate/node_modules/_webpack@3.12.0@webpack/lib/NormalModuleFactory.js:196:7)\n    at _combinedTickCallback (internal/process/next_tick.js:73:7)\n    at process._tickCallback (internal/process/next_tick.js:104:9)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

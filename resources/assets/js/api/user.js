@@ -15,10 +15,7 @@ export const login = ({ userName, password }) => {
 
 export const getUserInfo = (token) => {
     return axios.request({
-        url: 'get_info',
-        params: {
-            token
-        },
+        url: 'user_info',
         method: 'get'
     })
 }
@@ -26,6 +23,13 @@ export const getUserInfo = (token) => {
 export const logout = (token) => {
     return axios.request({
         url: 'logout',
+        method: 'post'
+    })
+}
+
+export const refresh = () => {
+    return axios.request({
+        url: 'refresh',
         method: 'post'
     })
 }

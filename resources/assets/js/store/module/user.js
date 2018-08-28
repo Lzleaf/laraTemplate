@@ -1,4 +1,4 @@
-import {login, logout, getUserInfo} from './../../api/user'
+import {login, logout, getUserInfo, refresh} from './../../api/user'
 import {setToken, getToken, removeToken} from './../../libs/ls'
 
 export const ACCESS_TOKEN_KEY = 'login_access_token'
@@ -7,7 +7,7 @@ export default {
     state: {
         access_token: getToken(ACCESS_TOKEN_KEY),
         user: {
-            avatar: '',
+            avatar: 'https://file.iviewui.com/dist/a0e88e83800f138b94d2414621bd9704.png',
             userName: '',
             userId: '',
             access: ''
@@ -37,42 +37,63 @@ export default {
                     userName,
                     password
                 }).then(res => {
-                    const data = res.data
-                    commit('setToken', {name: ACCESS_TOKEN_KEY, token: data.access_token})
+                    if(res){
+                        this.dispatch('loginSuccess', res)
+                    }
                     resolve()
                 }).catch(err => {
                     reject(err)
                 })
             })
         },
+
+        loginSuccess({commit}, res) {
+            const data = res.data
+            commit('setToken', {name: ACCESS_TOKEN_KEY, token: data.access_token})
+        },
+
         // 退出登录
         handleLogOut({state, commit}) {
             return new Promise((resolve, reject) => {
                 logout(state.access_token).then(() => {
-                    commit('setToken', {name: ACCESS_TOKEN_KEY, token: ''})
-                    state.user.access = ''
-                    commit('setUser', state.user)
+                    this.dispatch('logoutSuccess')
                     resolve()
                 }).catch(err => {
                     reject(err)
                 })
-                // 如果你的退出登录无需请求接口，则可以直接使用下面三行代码而无需使用logout调用接口
-                // commit('setToken', '')
-                // commit('setAccess', [])
-                // resolve()
             })
         },
+
+        logoutSuccess({state, commit}) {
+            commit('setToken', {name: ACCESS_TOKEN_KEY, token: ''})
+            state.user.access = ''
+            commit('setUser', state.user)
+        },
+
         //获取用户信息
         getUserInfo({state, commit}) {
             return new Promise((resolve, reject) => {
                 getUserInfo(state.access_token).then(res => {
                     const data = res.data
-                    commit('setUser', data.user)
+                    commit('setUser', data)
                     resolve(data)
+                }).catch(err => {
+                    console.log(err)
+                    reject(err)
+                })
+            })
+        },
+
+        handleRefresh({state, commit}) {
+            return new Promise((resolve, reject) => {
+                refresh().then(res => {
+                    this.dispatch('loginSuccess', res)
+                    resolve()
                 }).catch(err => {
                     reject(err)
                 })
             })
         }
+
     }
 }

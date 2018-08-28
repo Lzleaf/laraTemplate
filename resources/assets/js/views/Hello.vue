@@ -51,9 +51,11 @@
                 this._handlePosts(page)
             },
             _handlePosts(page) {
+                this.loading = true
                 this.handlePosts(page).then(res => {
                     this.tableData1 = res.data
                     this.total = res.total
+                    this.loading = false
                 })
             }
         },

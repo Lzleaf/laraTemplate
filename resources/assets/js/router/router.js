@@ -18,7 +18,7 @@ export default [
         component: Main,
         meta: {
             hideInMenu: true,
-            notCache: true
+            notCache: true,
         },
         children: [
             {
@@ -28,7 +28,8 @@ export default [
                 meta: {
                     hideInMenu: true,
                     title: '首页',
-                    notCache: true
+                    notCache: true,
+                    auth: true
                 },
                 component: require('../views/Hello.vue')
             }
@@ -57,7 +58,8 @@ export default [
                 name: 'level_2_1',
                 meta: {
                     icon: 'md-funnel',
-                    title: '二级-1'
+                    title: '二级-1',
+                    auth: true
                 },
                 component: require('../views/multilevel/level-2-1.vue')
             },
@@ -77,7 +79,8 @@ export default [
                         name: 'level_2_2_1',
                         meta: {
                             icon: 'md-funnel',
-                            title: '三级'
+                            title: '三级',
+                            auth: true
                         },
                         component: require('../views/multilevel/level-2-2/level-3-1.vue')
                     }
@@ -88,7 +91,8 @@ export default [
                 name: 'level_2_3',
                 meta: {
                     icon: 'md-funnel',
-                    title: '二级-3'
+                    title: '二级-3',
+                    auth: true
                 },
                 component: require('../views/multilevel/level-2-3.vue')
             },

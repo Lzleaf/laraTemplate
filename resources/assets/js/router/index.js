@@ -3,9 +3,9 @@ import VueRouter from 'vue-router'
 import routes from './router'
 import store from './../store'
 import iView from 'iview'
-import { canTurnTo } from './../libs/util'
+import {canTurnTo} from './../libs/util'
 
-import { getToken } from './../libs/ls'
+import {getToken} from './../libs/ls'
 
 Vue.use(VueRouter)
 
@@ -21,6 +21,7 @@ const ACCESS_TOKEN_KEY = 'login_access_token'
 router.beforeEach((to, from, next) => {
     iView.LoadingBar.start()
     const token = getToken(ACCESS_TOKEN_KEY)
+
     if (!token && to.name !== LOGIN_PAGE_NAME) {
         // 未登录且要跳转的页面不是登录页
         next({
@@ -38,7 +39,16 @@ router.beforeEach((to, from, next) => {
         store.dispatch('getUserInfo').then(user => {
             // 拉取用户信息，通过用户权限和跳转的页面的name来判断是否有权限访问;access必须是一个数组，如：['super_admin'] ['super_admin', 'admin']
             if (canTurnTo(to.name, user.access, routes)) next() // 有权限，可访问
-            else next({ replace: true, name: 'error_401' }) // 无权限，重定向到401页面
+            else next({replace: true, name: 'error_401'}) // 无权限，重定向到401页面
+        }).catch(err => {
+            store.dispatch('handleRefresh').then(res => {
+                next()
+            }).catch(err => {
+                store.dispatch('logoutSuccess')
+                next({
+                    name: LOGIN_PAGE_NAME
+                })
+            })
         })
     }
 })

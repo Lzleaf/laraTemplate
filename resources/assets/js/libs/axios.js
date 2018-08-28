@@ -1,8 +1,10 @@
 import Axios from 'axios'
 import baseURL from './../config/url'
 import {Message} from 'iview'
-import Cookies from 'js-cookie'
-import {TOKEN_KEY} from './util'
+import store from './../store'
+import router from './../router'
+
+import {getToken,TOKEN_KEY} from "./ls";
 
 class httpRequest {
     constructor() {
@@ -25,9 +27,14 @@ class httpRequest {
     interceptors(instance, url) {
         // 添加请求拦截器
         instance.interceptors.request.use(config => {
-            if (!config.url.includes('/users')) {
-                config.headers['x-access-token'] = Cookies.get(TOKEN_KEY)
+            let token = getToken(TOKEN_KEY)
+            // if (!config.url.includes('/users')) {
+            //     config.headers['x-access-token'] = token
+            // }
+            if(token) {
+                config.headers['Authorization'] = 'Bearer ' + token
             }
+
             // Spin.show()
             // 在发送请求之前做些什么
             return config
@@ -48,9 +55,7 @@ class httpRequest {
             if (data.code !== 200) {
                 // 后端服务在个别情况下回报201，待确认
                 if (data.code === 401) {
-                    Cookies.remove(TOKEN_KEY)
-                    window.location.href = window.location.pathname + '#/login'
-                    Message.error('未登录，或登录失效，请登录')
+                    return Promise.reject("401...")
                 } else {
                     if (data.msg) Message.error(data.msg)
                 }
